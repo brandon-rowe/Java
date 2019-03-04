@@ -5,7 +5,7 @@
 <h4>Exams & Projects from All Java Courses</h4>
   <ul>
     <li><i> CSCI I 200</i></li>
-    <li><i> CSCI II 300<</i></li>
-    <li><i> CSCI III 321<</i></li>
+    <li><i> CSCI II 300</i></li>
+    <li><i> CSCI III 321</i></li>
   </ul>
   
