@@ -7,5 +7,6 @@
     <li><i> CSCI I 200</i></li>
     <li><i> CSCI II 300</i></li>
     <li><i> CSCI III 321</i></li>
+    <li><i> CSCI Sec 455</i></li>
   </ul>
   
