@@ -11,11 +11,15 @@ public class Sim
 {
    public static void main(String[] args)
    {
-      int tally = 0;
-      int[] input = new int[] {0,0,0,1,1,1,};
-      System.out.println("Original options: "+input);
+      
       System.out.println("0's represent silver, 1's represent gold.");
+      
+      int tally = 0;
+      int[] input = new int[] {0,0,0,1,1,1};
+      
+      
       System.out.println("User picks a box with 1 gold value.");
+      
       loop1:
       for (int i : input)
       {
@@ -23,10 +27,35 @@ public class Sim
             input[i] -= i;
          break loop1;
       }
-      System.out.println(input);
+      
+      for (int i : input)
+      {
+         System.out.println(i + " ");
+      }
+      
       System.out.println("User grabs gold, what are the chances they grab gold again from the same box?");
       System.out.println("We can eliminate the silver box option since we already grabbed a gold ball.");
-      System.out.println("This leaves us with "+input+" as options");
+      
+      int count = 0;
+      loop2:
+      for (int i : input)
+      {
+         if (i == 0)
+            if (count <= 2)
+            {
+               input[i] -= i;
+               count++;
+            }
+            else
+            {
+               break loop2;
+            }
+      }
+      
+      for (int i : input)
+      {
+         System.out.println(i + " ");
+      }
       
       for (int i=0; i<100; i++)
       {
