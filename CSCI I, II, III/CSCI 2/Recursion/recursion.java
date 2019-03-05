@@ -9,7 +9,6 @@ public class recursion
       Scanner scan = new Scanner(System.in);
       input = scan.nextInt();
       System.out.println(sum(input));
-      
    }
    
    private static int sum(int num)
