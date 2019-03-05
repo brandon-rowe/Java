@@ -5,10 +5,28 @@
 //box 2 contains 2 silver balls
 //box 3 contains 1 gold ball & 1 silver ball
 import java.util.*;
+import java.lang.*;
 import java.util.Random;
+
 
 public class Sim
 {
+   public int[] remove(int[] input)
+   {  
+       int c = 0;
+       for (int i = 0; i < input.length; i++)
+       {
+           if (input[i] == 1 && c<1)
+           {
+               int[] copy = new char[symbols.length-1];
+               System.arraycopy(symbols, 0, copy, 0, i);
+               System.arraycopy(symbols, i+1, copy, i, symbols.length-i-1);
+               return copy;
+           }
+       }
+       return symbols;
+   }
+
    public static void main(String[] args)
    {
       
@@ -16,18 +34,24 @@ public class Sim
       
       int tally = 0;
       int[] input = new int[] {0,0,0,1,1,1};
+      int[] input2 = new int[5];
       
       
       System.out.println("User picks a box with 1 gold value.");
       
-      loop1:
-      for (int i : input)
-      {
-         if (i == 1)
-            input[i] -= i;
-         break loop1;
-      }
+      input2 = remove(input);
       
+      for(int i: input)
+      {
+         System.out.println(i);
+      }
+         }
+   
+}
+
+//array = ArrayUtils.removeElement(array, element);
+
+/*
       for (int i : input)
       {
          System.out.println(i + " ");
@@ -57,6 +81,7 @@ public class Sim
          System.out.println(i + " ");
       }
       
+      //Run a similation of checking 100 games.
       for (int i=0; i<100; i++)
       {
          Random rand = new Random();
@@ -66,7 +91,4 @@ public class Sim
          else 
             tally += 1;
       }
-      System.out.println("Tally after 100 games: "+tally);
-   }
-   
-}
+      System.out.println("Tally after 100 games: "+tally);*/
