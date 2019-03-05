@@ -7,6 +7,7 @@
     <li><i> CSCI 200 Computer Science I</i></li>
     <li><i> CSCI 300 Computer Science II</i></li>
     <li><i> CSCI 321 Computer Science III</i></li>
+    <li><i> CSCI 421 Computer Science IV</i></li>
     <li><i> CSCI 455 Computer Security</i></li>
   </ul>
   
