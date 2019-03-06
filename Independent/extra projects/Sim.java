@@ -21,6 +21,23 @@ public class Sim
            {
                System.arraycopy(input, 0, copy, 0, i);
                System.arraycopy(input, i+1, copy, i, input.length-i-1);
+               c++;
+           }
+       }
+       return copy; 
+   }
+   
+   public static int[] removeTwoSilver(int[] input)
+   {  
+       int[] copy = new int[input.length-1];
+       int c = 0;
+       for (int i = 0; i < input.length; i++)
+       {
+           if (input[i] == 0 && c<2)
+           {
+               System.arraycopy(input, 0, copy, 0, i);
+               System.arraycopy(input, i+1, copy, i, input.length-i-1);
+               c++;
            }
        }
        return copy; 
@@ -31,7 +48,16 @@ public class Sim
       int tally = 0;
       int[] input = new int[] {0,0,0,1,1,1};
       int[] minusGold = new int[5];
+      int[] minusSilver = new int[4];
       
+      System.out.println("//simulation");
+      System.out.println("//testing hypothesis for results of a game");
+.     System.out.println("//given 3 boxes with 2 balls inside each ");
+      System.out.println("//box 1 contains 2 gold balls");
+      System.out.println("//box 2 contains 2 silver balls");
+      System.out.println("//box 3 contains 1 gold ball & 1 silver ball");
+      System.out.println();
+      System.out.println();
       System.out.println("0's represent silver, 1's represent gold.");
       System.out.println("Current array: ");
       for(int i: input)
@@ -39,7 +65,8 @@ public class Sim
          System.out.print(i + " ");
       }
       System.out.println();
-      System.out.println("User picks a box with 1 gold value.");
+      System.out.println("User picks a box and grabs a gold ball.");
+      System.out.println("Current array: ");
       
       minusGold = Sim.removeOneGold(input);
       
@@ -47,6 +74,18 @@ public class Sim
       {
          System.out.print(i + " ");
       }
+      
+      System.out.println();
+      System.out.println("What are the chances they grab gold again from the same box?");
+      System.out.println("We can eliminate the silver box option since we already grabbed a gold ball.");
+      System.out.println("Current array: ");
+      minusSilver = Sim.removeOneGold(input);
+      
+      for(int i: minusGold)
+      {
+         System.out.print(i + " ");
+      }
+      
    }
 }
 
@@ -58,8 +97,7 @@ public class Sim
          System.out.println(i + " ");
       }
       
-      System.out.println("User grabs gold, what are the chances they grab gold again from the same box?");
-      System.out.println("We can eliminate the silver box option since we already grabbed a gold ball.");
+      
       
       int count = 0;
       loop2:
