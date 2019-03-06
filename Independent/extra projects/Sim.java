@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class Sim
 {
-   public static int[] remove(int[] input)
+   public static int[] removeOneGold(int[] input)
    {  
        int[] copy = new int[input.length-1];
        int c = 0;
@@ -23,27 +23,29 @@ public class Sim
                System.arraycopy(input, i+1, copy, i, input.length-i-1);
            }
        }
-       return copy;
-       
+       return copy; 
    }
 
    public static void main(String[] args)
    {
-      
-      System.out.println("0's represent silver, 1's represent gold.");
-      
       int tally = 0;
       int[] input = new int[] {0,0,0,1,1,1};
-      int[] input2 = new int[5];
+      int[] minusGold = new int[5];
       
-      
+      System.out.println("0's represent silver, 1's represent gold.");
+      System.out.println("Current array: ");
+      for(int i: input)
+      {
+         System.out.print(i + " ");
+      }
+      System.out.println();
       System.out.println("User picks a box with 1 gold value.");
       
-      input2 = Sim.remove(input);
+      minusGold = Sim.removeOneGold(input);
       
-      for(int i: input2)
+      for(int i: minusGold)
       {
-         System.out.println(i);
+         System.out.print(i + " ");
       }
    }
 }
