@@ -29,14 +29,14 @@ public class Sim
    
    public static int[] removeTwoSilver(int[] input)
    {  
-       int[] copy = new int[input.length-1];
+       int[] copy = new int[input.length-2];
        int c = 0;
        for (int i = 0; i < input.length; i++)
        {
            if (input[i] == 0 && c<2)
            {
                System.arraycopy(input, 0, copy, 0, i);
-               System.arraycopy(input, i+1, copy, i, input.length-i-1);
+               System.arraycopy(input, i+1, copy, i, input.length-i-2);
                c++;
            }
        }
@@ -48,11 +48,11 @@ public class Sim
       int tally = 0;
       int[] input = new int[] {0,0,0,1,1,1};
       int[] minusGold = new int[5];
-      int[] minusSilver = new int[4];
+      int[] minusSilver = new int[3];
       
       System.out.println("//simulation");
       System.out.println("//testing hypothesis for results of a game");
-.     System.out.println("//given 3 boxes with 2 balls inside each ");
+      System.out.println("//given 3 boxes with 2 balls inside each ");
       System.out.println("//box 1 contains 2 gold balls");
       System.out.println("//box 2 contains 2 silver balls");
       System.out.println("//box 3 contains 1 gold ball & 1 silver ball");
@@ -79,9 +79,9 @@ public class Sim
       System.out.println("What are the chances they grab gold again from the same box?");
       System.out.println("We can eliminate the silver box option since we already grabbed a gold ball.");
       System.out.println("Current array: ");
-      minusSilver = Sim.removeOneGold(input);
+      minusSilver = Sim.removeTwoSilver(minusGold);
       
-      for(int i: minusGold)
+      for(int i: minusSilver)
       {
          System.out.print(i + " ");
       }
@@ -89,37 +89,9 @@ public class Sim
    }
 }
 
-//array = ArrayUtils.removeElement(array, element);
 
-/*
-      for (int i : input)
-      {
-         System.out.println(i + " ");
-      }
       
-      
-      
-      int count = 0;
-      loop2:
-      for (int i : input)
-      {
-         if (i == 0)
-            if (count <= 2)
-            {
-               input[i] -= i;
-               count++;
-            }
-            else
-            {
-               break loop2;
-            }
-      }
-      
-      for (int i : input)
-      {
-         System.out.println(i + " ");
-      }
-      
+/*      
       //Run a similation of checking 100 games.
       for (int i=0; i<100; i++)
       {
@@ -130,4 +102,5 @@ public class Sim
          else 
             tally += 1;
       }
-      System.out.println("Tally after 100 games: "+tally);*/
+      System.out.println("Tally after 100 games: "+tally);
+*/
