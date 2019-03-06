@@ -1,4 +1,6 @@
-import java.utils.*;
+import java.util.*;
+//Not sure what I was even doing with this class
+//But I fixed it.
 
 
 public class prefixAvg1
@@ -7,14 +9,17 @@ public class prefixAvg1
    {
       //[2, 4, 6, 8, 10] [1, 3, 5, 7, 9] [3, 9, 6, 4, 1] 
       int[] X = new int[]{2, 4, 6, 8, 10};
-      int[] A;
+      int[] A = new int[X.length];
+      int tmp;
       
       for(int i=0; i<X.length; i++)
       {
-         A += X[i];
-         A[i] = A/(i+1);
+         tmp = X[i];
+         A[i] = tmp/(i+1);
       }
-      System.out.println(A);
-      
+      for (int i = 0; i<A.length; i++)
+      {
+         System.out.println(A[i]);
+      }
    }
 }
