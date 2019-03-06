@@ -11,20 +11,20 @@ import java.util.Random;
 
 public class Sim
 {
-   public int[] remove(int[] input)
+   public static int[] remove(int[] input)
    {  
+       int[] copy = new int[input.length-1];
        int c = 0;
        for (int i = 0; i < input.length; i++)
        {
            if (input[i] == 1 && c<1)
            {
-               int[] copy = new char[symbols.length-1];
-               System.arraycopy(symbols, 0, copy, 0, i);
-               System.arraycopy(symbols, i+1, copy, i, symbols.length-i-1);
-               return copy;
+               System.arraycopy(input, 0, copy, 0, i);
+               System.arraycopy(input, i+1, copy, i, input.length-i-1);
            }
        }
-       return symbols;
+       return copy;
+       
    }
 
    public static void main(String[] args)
@@ -39,14 +39,13 @@ public class Sim
       
       System.out.println("User picks a box with 1 gold value.");
       
-      input2 = remove(input);
+      input2 = Sim.remove(input);
       
-      for(int i: input)
+      for(int i: input2)
       {
          System.out.println(i);
       }
-         }
-   
+   }
 }
 
 //array = ArrayUtils.removeElement(array, element);
