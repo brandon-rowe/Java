@@ -1,10 +1,6 @@
 import java.io.*;
 import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
 public class Progression {
 
@@ -25,8 +21,7 @@ public class Progression {
    
    protected long void printProgression(int n)
    {
-      //
+      System.out.Println(n);
    }
-
     
 }

@@ -1,10 +1,6 @@
 import java.io.*;
 import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
 public class GenericGeo extends Progression<k>{
    protected k r;
@@ -16,6 +12,6 @@ public class GenericGeo extends Progression<k>{
       r = base;
    }
    protected K nextValue(){
-      
+      return (first*r);
    }      
 }
