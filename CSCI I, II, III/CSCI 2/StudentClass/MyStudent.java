@@ -4,7 +4,7 @@
 //********************************************************************
 
 import java.io.*;
-import java.util.scanner;
+import java.util.Scanner;
 import java.text.NumberFormat;
 import java.text.DecimalFormat;
 
@@ -26,7 +26,7 @@ public class MyStudent
       lName = inLName;
    }
    // Methods 
-   public loadGradeInfo(String inGrade, int inCourseHours)
+   public String loadGradeInfo(String inGrade, int inCourseHours)
    {
       double totCourseHours = 0.0;
       int currentCourseHours = inCourseHours;
@@ -37,48 +37,47 @@ public class MyStudent
       // Read and process each line of the file
       while (gradeScan.hasNext())
       {
-         lineScan = new Scanner();
+         lineScan = new Scanner(gradeScan);
 
-              if (inGrade = A)
-                  numGrade = numGrade + 4.0;
-                  lineScan.Next();
+              if (inGrade == "A")
+	      {numGrade = numGrade + 4.0;
+                  lineScan.hasNext();}
 
-              else if (inGrade = B+)
-                  numGrade = numGrade + 3.5;
-                  lineScan.Next();
+              else if (inGrade == "B+")
+	      {numGrade = numGrade + 3.5;
+                  lineScan.hasNext();}
 
-              else if (inGrade = B)
-                  numGrade = numGrade + 3.0;
-                  lineScan.Next();
+              else if (inGrade == "B")
+	      {numGrade = numGrade + 3.0;
+                  lineScan.hasNext();}
 
-              else if (inGrade = C+)
-                  numGrade = numGrade + 2.5;
-                  lineScan.Next();
+              else if (inGrade == "C+")
+	      {numGrade = numGrade + 2.5;
+                  lineScan.hasNext();}
 
-              else if (inGrade = C)
-                  numGrade = numGrade + 2.0;
-                  lineScan.Next();
+              else if (inGrade == "C")
+	      {numGrade = numGrade + 2.0;
+                  lineScan.Next();}
 
-              else if (inGrade = D+)
-                  numGrade = numGrade + 1.5;
-                  lineScan.Next();
+              else if (inGrade == "D+")
+	      {numGrade = numGrade + 1.5;
+                  lineScan.hasNext();}
 
-              else if (inGrade = D)
-                  numGrade = numGrade + 1.0;
-                  lineScan.Next();
-              else
-                  numGrade = 0.0;
+              else if (inGrade == "D")
+	      {numGrade = numGrade + 1.0;
+                  numGrade = 0.0;}
       }
       while (inCourseHours.hasNext())
       {
-         totCourseHours += totCourseHours
-         lineScan.NextInt()
+         totCourseHours += totCourseHours;
+         lineScan.NextInt();
       }
    } // End Method
    
    // Compute Method
-   public computeGPA()
+   public double computeGPA()
    {
       gpa = totGraPtHrs / totPossibleHrs;
+      return gpa;
    }// End Method
 }
