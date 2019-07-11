@@ -4,7 +4,8 @@ import java.io.*;
 public class testLoop{
    public static void main(String[] args){
       
-      int a=1, b=10, c=10, d=10;
+      
+      /*int a=1, b=10, c=10, d=10;
       switch(b=a++%3)
       {
          case 1:
@@ -19,7 +20,7 @@ public class testLoop{
       
       
       
-      /*for (int i = 3; i <= 36; i+=3)
+      for (int i = 3; i <= 36; i+=3)
       {
          System.out.println(i);
       }*/
