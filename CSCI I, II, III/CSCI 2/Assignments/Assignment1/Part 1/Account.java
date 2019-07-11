@@ -1,6 +1,5 @@
 //*******************************************************
 // Account.java
-//
 // A bank account class with methods to deposit, withdraw, 
 // and check the balance.
 //*******************************************************
@@ -10,7 +9,6 @@ public class Account
     private double balance;
     private String name;
     private long acctNum;
-
   //----------------------------------------------
   //Constructor -- initializes balance, owner, and account number
   //----------------------------------------------
@@ -20,7 +18,6 @@ public class Account
     name = owner;
     acctNum = number;
   }
-
   //----------------------------------------------
   //Constructor -- initializes balance and owner; generates random
   //account number
@@ -31,7 +28,6 @@ public class Account
     name = owner;
     acctNum = (int) (Math.random() * Integer.MAX_VALUE);
   }
-
   //----------------------------------------------
   //Constructor -- initializes owner as given and balance to 0.  
   //Generates random account number
@@ -42,7 +38,6 @@ public class Account
     name = owner;
     acctNum = (int) (Math.random() * Integer.MAX_VALUE);
   }
-
   //----------------------------------------------
   // Checks to see if balance is sufficient for withdrawal.
   // If so, decrements balance by amount; if not, prints message.
@@ -53,9 +48,7 @@ public class Account
        balance -= amount;
     else
        System.out.println("Insufficient funds");
-
   }
-
   //----------------------------------------------
   // Checks to see if balance is sufficient for withdrawal.
   // If so, decrements balance by amount; if not, prints message.
@@ -70,9 +63,7 @@ public class Account
 	}
     else
        System.out.println("Insufficient funds");
-
-  }
-
+   }
   //----------------------------------------------
   // Adds deposit amount to balance.
   //----------------------------------------------
@@ -80,7 +71,6 @@ public class Account
   {
     balance += amount;
   }
-
   //----------------------------------------------
   // Returns balance.
   //----------------------------------------------
@@ -96,15 +86,11 @@ public class Account
   {
     return acctNum;
   }
-
-
   //----------------------------------------------
   // Returns a string containing the name, acct number, and balance.
   //----------------------------------------------
     public String toString()
     {
-	return "Name: " + name + 
-	    "\nAcct #: " + acctNum + 
-	    "\nBalance: " + balance;
+   	return "Name: " + name + "\nAcct #: " + acctNum + "\nBalance: " + balance;
     }
 }

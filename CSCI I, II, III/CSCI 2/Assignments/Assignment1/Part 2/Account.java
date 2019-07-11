@@ -10,10 +10,7 @@ public class Account
     private double balance;
     private String name;
     private long acctNum;
-
     private static int numAccounts;
-
-
   //----------------------------------------------
   //Constructor -- initializes balance and owner; generates random
   //account number
@@ -25,7 +22,6 @@ public class Account
     acctNum = (int) (Math.random() * Integer.MAX_VALUE);
     numAccounts++;
   }
-
   //----------------------------------------------
   // Checks to see if balance is sufficient for withdrawal.
   // If so, decrements balance by amount; if not, prints message.
@@ -38,7 +34,6 @@ public class Account
        System.out.println("Insufficient funds");
 
   }
-
   //----------------------------------------------
   // Checks to see if balance is sufficient for withdrawal.
   // If so, decrements balance by amount; if not, prints message.
@@ -55,7 +50,6 @@ public class Account
        System.out.println("Insufficient funds");
 
   }
-
   //----------------------------------------------
   // Adds deposit amount to balance.
   //----------------------------------------------
@@ -63,7 +57,6 @@ public class Account
   {
     balance += amount;
   }
-
   //----------------------------------------------
   // Returns balance.
   //----------------------------------------------
@@ -71,7 +64,6 @@ public class Account
   {
     return balance;
   }
-
   //----------------------------------------------
   // Returns account number
   //----------------------------------------------
@@ -79,38 +71,29 @@ public class Account
   {
     return acctNum;
   }
-
   //----------------------------------------------
   // Return the number of accounts that currently exist
   //----------------------------------------------
-    public static int getNumAccounts()
-    {
-	return numAccounts;
-    }
-
-
+  public static int getNumAccounts()
+  {
+	 return numAccounts;
+  }
   //----------------------------------------------
   // Returns a string containing the name, acct number, and balance.
   //----------------------------------------------
-
     public String toString()
     {
-	return "Name: " + name + 
-	    "\nAcct #: " + acctNum + 
-	    "\nBalance: " + balance;
+   	return "Name: " + name + "\nAcct #: " + acctNum + "\nBalance: " + balance;
     }
-
   //----------------------------------------------
   // Close this account.
   //----------------------------------------------
     public void close()
     {
-	name += " CLOSED";
-	balance = 0;
-	numAccounts--;
+   	name += " CLOSED";
+   	balance = 0;
+   	numAccounts--;
     }
-
-
   //----------------------------------------------
   // Create a new account whose balance is the sum of 
   // the two given accounts, and close the given
@@ -118,22 +101,22 @@ public class Account
   //----------------------------------------------
     public static Account consolidate(Account acct1, Account acct2)
     {
-	if (!acct1.name.equals(acct2.name))
-	    {
-		System.out.println("Sorry, accounts with different names cannot be consolidated.");
-		return null;
-	    }
-	else if (acct1.acctNum == acct2.acctNum)
-	    {
-		System.out.println("Sorry, cannot consolidate an account with itself.");
-		return null;
-	    }
-	else //go ahead and consolidate
-	    {
-		Account newAcct = new Account(acct1.balance+acct2.balance, acct1.name);
-		acct1.close();
-		acct2.close();
-		return newAcct;
-	    }
+   	if (!acct1.name.equals(acct2.name))
+   	    {
+      		System.out.println("Sorry, accounts with different names cannot be consolidated.");
+      		return null;
+   	    }
+   	else if (acct1.acctNum == acct2.acctNum)
+   	    {
+      		System.out.println("Sorry, cannot consolidate an account with itself.");
+      		return null;
+   	    }
+   	else //go ahead and consolidate
+   	    {
+      		Account newAcct = new Account(acct1.balance+acct2.balance, acct1.name);
+      		acct1.close();
+      		acct2.close();
+      		return newAcct;
+   	    }
     }
 }
