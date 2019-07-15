@@ -95,9 +95,7 @@ public class Account
    
        public String toString()
        {
-   	return "Name: " + name + 
-   	    "\nAcct #: " + acctNum + 
-   	    "\nBalance: " + balance;
+   	      return "Name: " + name + "\nAcct #: " + acctNum + "\nBalance: " + balance;
        }
    
      //----------------------------------------------
