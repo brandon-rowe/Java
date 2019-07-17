@@ -22,6 +22,7 @@ public class Square
    //--------------------------------------
    public int sumRow(int row)
    {
+   
    }
    //--------------------------------------
    //return the sum of the values in the given column
@@ -35,6 +36,7 @@ public class Square
    //--------------------------------------
    public int sumMainDiag()
    {
+   
    }
    //--------------------------------------
    //return the sum of the values in the other ("reverse") diagonal
@@ -66,6 +68,7 @@ public class Square
    //----------------------------------------
    public void printSquare()
    {
+   
       
    }
 }
