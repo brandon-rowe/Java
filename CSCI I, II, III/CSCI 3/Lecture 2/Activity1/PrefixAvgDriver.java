@@ -11,7 +11,7 @@ public class PrefixAvgDriver{
       int Z [] = {3, 9, 6, 4, 1};
       int Q [] = new int[5];
       
-      PrefixAvgerage1 avg = new PrefixAvgerage1();
+      PrefixAverage1 avg = new PrefixAverage1();
       Q = avg.testArray(X);
       
       for(int i = 0; i<Q.length; i++){

@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.io.*; 
 import java.lang.*;
 
-public class PrefixAvgerage1{
+public class PrefixAverage1{
 
    public int[] testArray(int [] in){
       int I [] = new int[5];
