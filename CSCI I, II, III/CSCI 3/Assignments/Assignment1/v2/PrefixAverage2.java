@@ -6,11 +6,12 @@ import java.lang.*;
 public class PrefixAverage2{
 
    public int[] testArray(int [] in){
-      int X [] = new int[5];
-      int A [] = new int[5];
+      int n = in.length;
+      int X [] = new int[n];
+      int A [] = new int[n];
       
       for(int k=0; k<in.length; k++){
-         I[k] = in[k];
+         X[k] = in[k];
       }
       
       
