@@ -8,10 +8,12 @@ import java.util.Random;
 public class PrefixAvgDriver2{
 
    public static void main(String[] args){
-      int n = 1000;
+      
       int X [] = new int[1000];
       //int Y [] = new int[5000];
       //int Z [] = new int[10000];
+      
+      int n = x.length;
       int Q [] = new int[n];
       
       PrefixAverage2 avg = new PrefixAverage2();
