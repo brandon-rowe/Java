@@ -12,13 +12,15 @@ public class PrefixAvgDriver{
       int Q [] = new int[5];
       
       PrefixAverage1 avg = new PrefixAverage1();
+      
+      
       Q = avg.testArray(X);
       
       for(int i = 0; i<Q.length; i++){
          System.out.println(Q[i]);
       }   
       System.out.println();
-      System.out.print("Time in nanoseconds = ");
+      System.out.print("End time in nanoseconds = ");
       System.out.println(System.nanoTime());
       System.out.println();
       
