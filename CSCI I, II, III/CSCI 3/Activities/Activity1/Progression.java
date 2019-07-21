@@ -21,7 +21,10 @@ public class Progression {
    
    protected long void printProgression(int n)
    {
-      System.out.Println(n);
+      System.out.print(firstValue());
+      for(int i = 2; i<=n; i++)
+         System.out.println(" "+nextValue());
+      System.out.println();
    }
     
 }

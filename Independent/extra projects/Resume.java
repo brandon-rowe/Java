@@ -4,18 +4,35 @@ import java.lang.*;
 public class Resume
 {
    private String name;
+   private String degree;
+   private String gpa;
    
-   public Resume(String owner)
+   public Resume(String inName, String inDegree, double inGpa)
    {
-      name = owner;
+      this.name = inName;
+      this.degree = inDegree;
+      this.gpa = inGpa;
+      
+   }
+   
+   public Resume(String inName, String inDegree)
+   {
+      this.name = inName;
+      this.degree = inDegree;
+      
+   }
+   
+   public Resume(String inName)
+   {
+      this.name = inName;
    }
    public final String toString() 
    {
-      String info = "Hello: " + name;
+      String info = "\t Hello: " + this.name + "\n\t " + "Degree: " + this.degree;
        return info;
    }
-   public final String header()
+   /*public final String header()
    {
       String header = name + "\n" + 
-   }
+   }*/
 }
