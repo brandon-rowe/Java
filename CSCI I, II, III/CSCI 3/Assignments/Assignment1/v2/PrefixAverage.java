@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 import java.lang.*;
 
-public class test{
+public class PrefixAverage{
    public static void main(String[] args){
          int X [] = new int[1000];
          int n = X.length;
@@ -12,12 +12,49 @@ public class test{
          long endTime = 0;
          long time = 0;
          
-         System.out.println("Creating random array for int X [].");
+         System.out.println("Creating random array for int X [1000].");
          startTime = System.nanoTime();
          System.out.print("Start time in nanoseconds = ");
          System.out.println(startTime);
          for(int i=0; i<n; i++){
             X[i] = rand.nextInt(100);
+         }
+         endTime = System.nanoTime();
+         System.out.print("End time in nanoseconds = ");
+         System.out.println(endTime);
+         time = endTime - startTime;
+         System.out.print("Runtime in nanoseconds = ");
+         System.out.println(time);
+         System.out.println();
+         
+         System.out.println("Creating average array for int A [].");
+         startTime = System.nanoTime();
+         System.out.print("Start time in nanoseconds = ");
+         System.out.println(startTime);
+         for(int i=0; i<n; i++){
+            int a = 0; 
+            for(int j=0; j<=i; j++){ 
+               a += X[j];
+            }
+            A[i] += (a/(i+1));
+         }
+         endTime = System.nanoTime();
+         System.out.print("End time in nanoseconds = ");
+         System.out.println(endTime);
+         time = endTime - startTime;
+         System.out.print("Runtime in nanoseconds = ");
+         System.out.println(time);
+         System.out.println();
+         
+         
+         int Y [] = new int[5000];
+         int n = Y.length;
+         System.out.println("Creating random array for int X [1000].");
+         startTime = System.nanoTime();
+         System.out.print("Start time in nanoseconds = ");
+         System.out.println(startTime);
+         for(int i=0; i<n; i++){
+            Y[i] = rand.nextInt(100);
          }
          endTime = System.nanoTime();
          System.out.print("End time in nanoseconds = ");
