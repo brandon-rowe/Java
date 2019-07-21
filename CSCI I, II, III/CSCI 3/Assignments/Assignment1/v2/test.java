@@ -10,10 +10,13 @@ public class test{
          Random rand = new Random();
          
          
+         System.out.println("Creating random array for int X [].");
          for(int i=0; i<n; i++){
             X[i] = rand.nextInt(100);
          }
          
+         System.out.println("Creating average array for int A [].");
+
          for(int i=0; i<n; i++){
             int a = 0; 
             for(int j=0; j<=i; j++){ 
@@ -22,6 +25,8 @@ public class test{
             A[i] += (a/(i+1));
          }
          
+         
+         System.out.println("End of random array.");
          for(int i=0; i<n; i++){
             System.out.println(X[i]);
          }
