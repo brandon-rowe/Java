@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 import java.lang.*;
 
-public class PrefixAverage{
+public class PrefixAvg2{
    public static void main(String[] args){
          int X [] = new int[1000];
          int n = X.length;
@@ -31,13 +31,13 @@ public class PrefixAverage{
          startTime = System.nanoTime();
          System.out.print("Start time in nanoseconds = ");
          System.out.println(startTime);
-         for(int i=0; i<n; i++){
-            int a = 0; 
-            for(int j=0; j<=i; j++){ 
-               a += X[j];
-            }
-            A[i] += (a/(i+1));
+         
+         int a = 0; 
+         for(int i=0; i<n; i++){ 
+            a += X[i];
+            A[i] = (a/(i+1));
          }
+         
          endTime = System.nanoTime();
          System.out.print("End time in nanoseconds = ");
          System.out.println(endTime);
@@ -45,7 +45,7 @@ public class PrefixAverage{
          System.out.print("Runtime in nanoseconds = ");
          System.out.println(time);
          System.out.println();
-         
+                  
          
          int Y [] = new int[5000];
          n = Y.length;
@@ -69,12 +69,10 @@ public class PrefixAverage{
          startTime = System.nanoTime();
          System.out.print("Start time in nanoseconds = ");
          System.out.println(startTime);
-         for(int i=0; i<n; i++){
-            int a = 0; 
-            for(int j=0; j<=i; j++){ 
-               a += Y[j];
-            }
-            B[i] += (a/(i+1));
+         a = 0; 
+         for(int i=0; i<n; i++){ 
+            a += Y[i];
+            B[i] = (a/(i+1));
          }
          endTime = System.nanoTime();
          System.out.print("End time in nanoseconds = ");
@@ -106,12 +104,10 @@ public class PrefixAverage{
          startTime = System.nanoTime();
          System.out.print("Start time in nanoseconds = ");
          System.out.println(startTime);
-         for(int i=0; i<n; i++){
-            int a = 0; 
-            for(int j=0; j<=i; j++){ 
-               a += Z[j];
-            }
-            C[i] += (a/(i+1));
+         a = 0; 
+         for(int i=0; i<n; i++){ 
+            a += Z[i];
+            C[i] = (a/(i+1));
          }
          endTime = System.nanoTime();
          System.out.print("End time in nanoseconds = ");
