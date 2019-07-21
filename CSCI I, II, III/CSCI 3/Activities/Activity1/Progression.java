@@ -19,12 +19,15 @@ public class Progression {
       return ++cur;
    }
    
-   protected long void printProgression(int n)
+   protected void printProgression(int n)
    {
-      System.out.print(firstValue());
-      for(int i = 2; i<=n; i++)
-         System.out.println(" "+nextValue());
+      System.out.println(firstValue());
+      System.out.println(nextValue());
+      for(int i = 2; i<=n; i++){
+         System.out.println(nextValue());
+      }
       System.out.println();
+      
    }
     
 }
