@@ -2,7 +2,7 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-public class GeomDoubleProgression extends DoubleProgression{
+public class GeomDoubleProgression extends doubleProgression{
    protected double r;
    GeomDoubleProgression(double a, double base){
       first = a;
@@ -11,7 +11,7 @@ public class GeomDoubleProgression extends DoubleProgression{
    protected double nextValue(){
       cur *= r;
       if(cur<0)
-         throw new Exception("Negative Value!");
+         throw new IllegalArgumentException("Negative Value!");
       return cur;
    }
 
