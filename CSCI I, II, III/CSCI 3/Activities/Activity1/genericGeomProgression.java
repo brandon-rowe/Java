@@ -2,16 +2,16 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-public class genericGeomProgression extends genericProgression<k>{
-   protected k r;
+public class genericGeomProgression extends genericProgression<K>{
+   protected K r;
    genericGeomProgression(){
       this(1,1);
    }
-   genericGeomProgression(k a, k base){
+   genericGeomProgression(K a, K base){
       first = a;
       r = base;
    }
-   protected k nextValue(){
+   protected K nextValue(){
       cur *= r;
       if(cur<0)
          throw new IllegalArgumentException("Negative Value!");
