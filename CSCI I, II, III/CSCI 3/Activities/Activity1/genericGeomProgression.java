@@ -2,20 +2,19 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-public class GeomDoubleProgression extends doubleProgression{
-   protected double r;
-   GeomDoubleProgression(){
+public class genericGeomProgression extends genericProgression<k>{
+   protected k r;
+   genericGeomProgression(){
       this(1,1);
    }
-   GeomDoubleProgression(double a, double base){
+   genericGeomProgression(k a, k base){
       first = a;
       r = base;
    }
-   protected double nextValue(){
+   protected k nextValue(){
       cur *= r;
       if(cur<0)
          throw new IllegalArgumentException("Negative Value!");
       return cur;
    }
-
 }
