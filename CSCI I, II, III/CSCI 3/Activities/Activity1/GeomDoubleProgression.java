@@ -5,7 +5,7 @@ import java.io.*;
 public class GeomDoubleProgression extends doubleProgression{
    protected double r;
    GeomDoubleProgression(){
-      this(1,1);
+      this(1.0,1.0);
    }
    GeomDoubleProgression(double a, double base){
       first = a;

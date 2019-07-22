@@ -2,7 +2,7 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-public class genericGeomProgression extends genericProgression<K>{
+public class genericGeomProgression extends genericProgression<Double>{
    protected K r;
    genericGeomProgression(){
       this(1,1);
