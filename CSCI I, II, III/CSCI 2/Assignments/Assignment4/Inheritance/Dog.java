@@ -13,16 +13,14 @@ public abstract class Dog
     // ------------------------------------------------------------
     public Dog(String name)
     {
-	this.name = name;
+	   this.name = name;
     }
-
-
     // ------------------------------------------------------------
     // Returns the dog's name
     // ------------------------------------------------------------
     public String getName()
     {
-	return name;
+	   return name;
     }
 
     // ------------------------------------------------------------
@@ -30,10 +28,8 @@ public abstract class Dog
     // ------------------------------------------------------------
     public String speak()
     {
-	return "Woof";
+	   return "Woof";
     }
-
-
     // ------------------------------------------------------------
     // Require that subclasses have an avgBreedWeight method
     // ------------------------------------------------------------

@@ -1,34 +1,39 @@
 // ****************************************************************
-// Yorkshire.java
+// Labrador.java
 //
 // A class derived from Dog that holds information about
-// a Yorkshire terrier. Overrides Dog speak method.
+// a labrador retriever.  Overrides Dog speak method and includes
+// information about avg weight for this breed.
 //          
 // ****************************************************************
 
-public class Yorkshire extends Dog
+public class Labrador extends Dog
 {
-    private int breedWeight = 6;
+    private String color; //black, yellow, or chocolate?
+    private int breedWeight = 75;
 
-    public Yorkshire(String name)
+    public Labrador(String name,  String color)
     {
-	super(name);
+   	super(name);
+   	this.color = color;
     }
 
-
     // ------------------------------------------------------------
-    // Small bark -- overrides speak method in Dog
+    // Big bark -- overrides speak method in Dog
     // ------------------------------------------------------------
     public String speak()
     {
-	return "woof";
+	   return "WOOF";
     }
+
 
     // ------------------------------------------------------------
     // Returns weight
     // ------------------------------------------------------------
     public int avgBreedWeight()
     {
-	return breedWeight;
+	   return breedWeight;
     }
+
+
 }

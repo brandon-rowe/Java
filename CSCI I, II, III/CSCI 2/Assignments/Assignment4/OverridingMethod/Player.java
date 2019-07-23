@@ -17,13 +17,13 @@ public class Player
 
     public void readPlayer()
     {
-	Scanner scan = new Scanner(System.in);
-	System.out.print("Name: ");
-	name = scan.nextLine();
-	System.out.print("Team: ");
-	team = scan.nextLine();
-	System.out.print("Jersey number: ");
-	jerseyNumber = scan.nextInt();
+   	Scanner scan = new Scanner(System.in);
+   	System.out.print("Name: ");
+   	name = scan.nextLine();
+   	System.out.print("Team: ");
+   	team = scan.nextLine();
+   	System.out.print("Jersey number: ");
+   	jerseyNumber = scan.nextInt();
     }
 
     //-----------------------------------------------------------
@@ -32,7 +32,7 @@ public class Player
     //-----------------------------------------------------------
     public boolean equals(Player p)
     {
-	return team.equals(p.team) && jerseyNumber == p.jerseyNumber;
+	   return team.equals(p.team) && jerseyNumber == p.jerseyNumber;
     }
 
 }
