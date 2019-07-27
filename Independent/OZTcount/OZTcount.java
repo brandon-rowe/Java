@@ -20,11 +20,11 @@ public class OZTcount{
       System.out.println("What is the type of the metal: ");
       metalType = scan.nextLine();
       if (metalType == "gold")
-            currentPrice = ozt.goldPrice(weight, price);
+            {currentPrice = ozt.goldPrice(weight, price);}
       else if (metalType == "silver")
-            currentPrice = ozt.silverPrice(weight, price);
+            {currentPrice = ozt.silverPrice(weight, price);}
       else if (metalType == "platinum")
-            currentPrice = ozt.platinumPrice(weight, price);
+            {currentPrice = ozt.platinumPrice(weight, price);}
       else  
          {
             System.out.println("Please enter a valid metal."); 
