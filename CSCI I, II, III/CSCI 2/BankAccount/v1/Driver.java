@@ -8,7 +8,7 @@ package inherit;
 public class Driver 
 {
     public static void main(String[] arg)
-    {4
+    {
          // Create instance of MaintainAccounts() called test.
          MaintainAccounts test = new MaintainAccounts();
          // Create instance of BankAccount called acc.
