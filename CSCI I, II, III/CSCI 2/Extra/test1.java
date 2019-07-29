@@ -19,10 +19,10 @@ public class test1{
       for(int i=0; i<list.length; i++)
       {      
          if (list[i] == target)
-            for (int j = i; j<list.length; j++)
+            for (int j = i; j<list.length-1; j++)
             {
-               list[i] = list[i+1];
-               check = true;
+              list[j] = list[j+1];
+              check = true; 
             }
          
       }
@@ -33,6 +33,9 @@ public class test1{
    }
 
 }
+// Code below is first attempt using int prev, cur, next values.
+// Current code is working but still faulty. 
+// Need to revisit to perfect.
 
 /*if (i+1 != list.length ){
             prev = cur;
@@ -54,4 +57,5 @@ public class test1{
             {
                list[i] = 0;
             }
-         }*/
+         }
+*/
