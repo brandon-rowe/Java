@@ -12,12 +12,9 @@ public abstract class BankAccount {
     //member variables to describe an account
     private String name;
     private int accountnumber;
-    private String address;
-    private String email;
-    private String phone;
+    
     protected double balance;
-    private static int currentaccnum = 10000; //used to generate accountnumber for a new account
-    private double interestrate; //interest rate 
+ 
     
     //constructor
     public BankAccount(String name, String address, String email, String phone)

@@ -5,13 +5,14 @@ import java.io.*;
 public class test5 {
    public static void main(String[] args)
    {
-     String[] str = {"xyz","ijk","lmn","opq","rst","uvw","abc","def","ghi","jkl"}; 
-     str = selectionSort(str);
-     for(int i = 0; i<str.length; i++)
-          System.out.println(str[i]);
+     String[] list = {"xyz","ijk","lmn","opq","rst","uvw","abc","def","ghi","jkl"}; 
+     test5 test = new test5();
+     test.selectionSort(list);
+     for(int i = 0; i<list.length; i++)
+          System.out.println(list[i]);
    }
    
-   public static String[] selectionSort(String[] list)
+   public static void selectionSort(String[] list)
    {
       int max;
       String temp;
@@ -26,6 +27,5 @@ public class test5 {
          list[max]  = temp;
       }
       
-      return list;
    }
 }

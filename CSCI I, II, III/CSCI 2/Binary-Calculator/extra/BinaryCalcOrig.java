@@ -171,11 +171,14 @@ class BinaryCalc extends Frame implements ActionListener
          break;
       
          case "=":
-         if(opn!="")
+         if(opn=="")
          {
+            pre=cur;
+            cur="";
+         }
+         else
             evaluate();
             opn="=";
-         }
          break;
       
          case "Clr":
@@ -209,7 +212,7 @@ class BinaryCalc extends Frame implements ActionListener
       }
       else
       {
-         contStr += (opn + cur);
+         contStr += (cur + opn);
       }
       
       int result = 0;

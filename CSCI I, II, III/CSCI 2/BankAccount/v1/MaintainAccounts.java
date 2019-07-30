@@ -63,34 +63,9 @@ public class MaintainAccounts {
         return result;
     }
     
-    public boolean closeaccount(int accnum)
-    {
-        //find the account
-        int index = -1;
-        for(int i=0;i<numofaccounts;i++)
-            if (acclist[i].getaccountnumber() == accnum)
-            {
-                index = i;
-                break;
-            }
-        if (index == -1)
-            return false; //cannot find the account
-        //delete it
-        if (numofdelaccounts == delacclist.length)
-            delacclist = increase(delacclist);
-        delacclist[numofdelaccounts++] = acclist[index];
-        //delete it from acclist
-        deleteaccount(index);
-        return true;
-    }
+
     
-    //delete the account at index
-    private void deleteaccount(int index)
-    {
-        for (int i = index+1;i<numofaccounts;i++)
-            acclist[i-1] = acclist[i];
-        numofaccounts--;
-    }
+   
     
     @Override
     public String toString()
