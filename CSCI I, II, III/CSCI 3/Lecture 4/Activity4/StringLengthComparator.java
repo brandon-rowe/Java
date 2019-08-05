@@ -20,4 +20,16 @@ public class StringLengthComparator implements Comparator<String>
         }
         return 0;
     }
+    
+    public int BitCount(int n)
+    {
+      count = 0;
+      do
+      {
+         count = count++;
+         n = n & (n-1);
+      }
+      while (n > 0);
+      return count;
+    }
 }
