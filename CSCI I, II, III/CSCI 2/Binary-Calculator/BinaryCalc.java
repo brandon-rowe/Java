@@ -322,10 +322,6 @@ class BinaryCalc extends Frame implements ActionListener
     
 }
 
-
-
-
-
 class CalcAdapter extends WindowAdapter
 {
    public void windowClosing(WindowEvent we)
