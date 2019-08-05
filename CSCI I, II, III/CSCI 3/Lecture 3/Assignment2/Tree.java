@@ -10,7 +10,7 @@ class Tree
 	{ 
 		Array_imp obj = new Array_imp(); 
 		obj.Root("A"); 
-	                obj.set_Left("B", 0); 
+	   obj.set_Left("B", 0); 
 		obj.set_Right("C", 0); 
 		obj.set_Left("D", 1); 
 		obj.set_Right("E", 1); 

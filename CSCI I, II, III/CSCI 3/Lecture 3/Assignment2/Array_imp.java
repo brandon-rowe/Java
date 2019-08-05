@@ -12,7 +12,7 @@ class Array_imp {
 	public void set_Left(String key, int root) 
 	{ 
 		 /*need your code here*/
-
+      int t = (root * 2)+1;
                                 
 		if(str[root] == null){ 
 			System.out.printf("Can't set child at %d, no parent found\n",t); 
@@ -25,7 +25,8 @@ class Array_imp {
 	public void set_Right(String key, int root) 
 	{ 
 		/*need your code here*/
-
+      int t = (root * 2)+2;
+      
 		if(str[root] == null){ 
 			System.out.printf("Can't set child at %d, no parent found\n",t); 
 		}else{ 
