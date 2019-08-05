@@ -6,16 +6,17 @@ public class Test
 {
     public static void main(String[] args)
     {
-        Comparator<String> comparator = new StringLengthComparator();
-        PriorityQueue<String> queue = 
-            new PriorityQueue<String>(10, comparator);
-        queue.add("short");
-        queue.add("very long indeed");
-        queue.add("medium");
+        Comparator<Integer> comparator = new IntegerComparator();
+        PriorityQueue<Integer> queue = 
+            new PriorityQueue<Integer>(10, comparator);
+        queue.add(9);
+        queue.add(12);
+        queue.add(33);
         while (queue.size() != 0)
         {
             System.out.println(queue.remove());
         }
+        
     }
 }
 

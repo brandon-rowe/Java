@@ -1,9 +1,9 @@
 // StringLengthComparator.java
 import java.util.Comparator;
 
-public class StringLengthComparator implements Comparator<String>
+public class IntegerComparator implements Comparator<Integer>
 {
-    @Override
+    
     public int compare(Integer num1, Integer num2)
     {
         String binary1 = Integer.toBinaryString(num1);
@@ -14,7 +14,7 @@ public class StringLengthComparator implements Comparator<String>
         
         for(int i = 0; i < binary1.length(); i++)
         {
-         count1+=binary1.charAt(i)&1;
+         count1+=binary1.charAt(i) & 1;
         }
         
         for(int i = 0; i < binary2.length(); i++)
@@ -23,11 +23,15 @@ public class StringLengthComparator implements Comparator<String>
         }
         
         if(count1 == count2)
-         return 0;
+        {
+            return 0;
+        }
         else if (count1 < count2)
-         return -1;
+        {
+            return -1;
+        }   
         else
-        return 1;
+            return 1;
     }
 
 }
