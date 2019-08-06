@@ -46,14 +46,14 @@ public class scheduler implements Comparable<scheduler>
          throw new Exception("Length is incorrect.");
    }
    @Override
-   public int compareTo(Scheduler cpujob)
+   public int compareTo(scheduler cpujob)
    {
       return (this.priority + cpujob.priority);
    }
    
    public String getName()
    {return name;}
-   public String getName()
+   public void setName(String name)
    {this.name = name;}
    
 }
