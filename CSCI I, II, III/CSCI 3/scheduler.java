@@ -1,24 +1,28 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
 public class scheduler implements Comparable<scheduler>
 {
+
+   private int priority;
+   private int timeslice;
+   private String name;
+   
    public scheduler(int priority, int timeslice, String name)
    {
       if (priority >= -20 && priority <= 19)
       {
          this.priority = priority;
       }
-      else
-         throw new Exception("Priority incorrect");
-      if (timeslice <= 100 && timeslice >= 1)
+      else if (timeslice <= 100 && timeslice >= 1)
       {
          this .timeslice = timeslice;
       }
       else
-         throw new Exception("Length is incorrect.");
          this.name = name;
    }
-   private int priority;
-   private int timeslice;
-   private String name;
+   
    
    public int getPriority()
    {
@@ -30,7 +34,7 @@ public class scheduler implements Comparable<scheduler>
       if (priority >= -20 && priority <= 19)
          {this.priority = priority;}
       else
-         throw new Exception("Priority incorrect.");
+         System.out.println("Priority incorrect.");
    }
    
    public int getTimeSlice()
@@ -43,7 +47,7 @@ public class scheduler implements Comparable<scheduler>
       if (timeslice <= 100 && timeslice >= 1)
          this.timeslice = timeslice;
       else
-         throw new Exception("Length is incorrect.");
+         System.out.println("Length is incorrect.");
    }
    @Override
    public int compareTo(scheduler cpujob)
