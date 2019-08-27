@@ -1,4 +1,4 @@
-# Java
+# Operating Systems
 
 <h4>University Course</h4>
 <h3>CSCI 511</h3>
