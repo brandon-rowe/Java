@@ -17,24 +17,12 @@ public class shell
             	while (true) 
 		{
             		//read the command
-            		System.out.print("shell>");
+            		System.out.print("browe shell>");
             		commandLine = console.readLine();
 
             		//no input
             		if (commandLine.equals(""))
             		continue;
-
-            		//history
-            		if(commandLine.equals('*'))
-            		{
-              			//new class HistoryStringArray();
-             			// {
-               			//  history[4] = history[3]
-                		//  history[3] = history[2]
-                		//  history[2] = history[1]
-                		//  history[1] = history[0]
-                		//  history[0] = commandLine
-                		}
 
             		//help
             		if (commandLine.equals("help"))
@@ -43,8 +31,7 @@ public class shell
                 		System.out.println();
                 		System.out.println("Welcome to the shell");
                 		System.out.println("Written by: Lucky Rowe");
-                		System.out.println("CSCI 511   -  Dr. Majundur");
-                		System.out.println("--------------------");
+                		System.out.println("CSCI 511 - Dr. Majundur");
                 		System.out.println();
                 		System.out.println("Commands to use:");
                 		System.out.println("1) cat prog.java");
@@ -52,20 +39,30 @@ public class shell
                 		System.out.println("3) clear");
                 		System.out.println();
                 		System.out.println();
-                		System.out.println("---------------------");
-                		System.out.println();
             		}
 
             		if (commandLine.equals("clear"))
             		{
-
-               			for (int ctr = 0; ctr < 10; ctr++)
+               			for (int c=0; c<100; c++)
                			{
                   			System.out.println();
                			}
             		}
 
-            		if (commandLine.endsWith(".java"))
+            		if (commandLine.equals("exit"))
+            		{
+                		System.exit(0);
+            		}
+			else
+			{
+				System.out.println("Incorrect Command");
+			}
+        	}
+    	}
+}
+
+
+			/*if (commandLine.endsWith(".java"))
             		{
               			if(commandLine.startsWith("cat"))
               			{
@@ -78,14 +75,14 @@ public class shell
                   			System.out.println("Incorrect Command");
               			}
             		}
-
-            		if (commandLine.equals("exit"))
-            		{
-                		System.out.println("...Terminating the Virtual Machine");
-                		System.out.println("...Done");
-                		System.out.println("Please Close manually with Options > Close");
-                		System.exit(0);
-            		}
-        	}
-    	}
-}
+			//history
+            		//if(commandLine.equals('*'))
+            		//{
+              			//new class HistoryStringArray();
+             			// {
+               			//  history[4] = history[3]
+                		//  history[3] = history[2]
+                		//  history[2] = history[1]
+                		//  history[1] = history[0]
+                		//  history[0] = commandLine
+                		//}*/
