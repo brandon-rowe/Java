@@ -4,38 +4,38 @@ import java.lang.*;
 
 class selectionSort
 {
-	void sort(int arr[])
+	void sort(int A[])
 	{
-		int n = arr.length;
+		int n = A.length;
 		for (int i=0; i < n-1; i++)
 		{
 			int min_idx = i;
 			for(int j=i+1; j<n; j++)
 			{
-				if (arr[j] < arr[min_idx])
+				if (A[j] < A[min_idx])
 					min_idx = j;
 			}
-			int tmp = arr[min_idx];
-			arr[min_idx] = arr[i];
-			arr[i] = tmp;
+			int tmp = A[min_idx];
+			A[min_idx] = A[i];
+			A[i] = tmp;
 		}
 	}
 
-	void printArray(int arr[])
+	void printArray(int A[])
 	{
-		int n = arr.length;
+		int n = A.length;
 		for (int i = 0; i<n; ++i)
-			System.out.print(arr[i] + " ");
+			System.out.print(A[i] + " ");
 		System.out.println();
 	}
 
 	public static void main(String args[])
 	{
 		selectionSort ob = new selectionSort();
-		int arr[] = {64, 25, 12, 22, 11};
-		ob.sort(arr);
+		int A[] = {64, 25, 12, 22, 11};
+		ob.sort(A);
 		System.out.println("Sorted array");
-		ob.printArray(arr);
+		ob.printArray(A);
 
 	}
 
