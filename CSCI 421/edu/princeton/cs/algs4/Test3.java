@@ -4,45 +4,40 @@ import edu.princeton.cs.algs4.StdRandom;
 import java.util.Random;
 
 public class Test3 {
-
-    public static int N = 10000;
-    public static Comparable[] sequence = new Comparable[N];
+    public static int N = 16000;
+    public static Comparable[] s1 = new Comparable[N];
 
     public static void main(String[] args) {
         {
-
+            Test3 test = new Test3();
+            test.process();
+        }
+    }
+    
+    public static void process(){
             long start, end, total;
             Random random = new Random();
+            for (int i = 0; i < N; i++)
+                s1[i] = Math.abs(random.nextInt(N*5));
+            System.out.println("Original Quicksort - Test 1: "+ N);
+
+            start = System.currentTimeMillis();
+            sort(s1);
+            end = System.currentTimeMillis();
+            total = end - start;
+            System.out.println("Runtime: "+total);
 
             for (int i = 0; i < N; i++)
-                sequence[i] = Math.abs(random.nextInt(N*5));
+                s1[i] = Math.abs(random.nextInt(N*5));
 
-            System.out.println("Original Quicksort length "+ N);
+            System.out.println("Randomized Quicksort - Test 1: "+ N);
 
 
             start = System.currentTimeMillis();
-            sort(sequence);
+            sortRandom(s1, 0, N - 1);
             end = System.currentTimeMillis();
-
             total = end - start;
-
-            System.out.println("\nRuntime: "+total);
-
-            for (int i = 0; i < N; i++)
-                sequence[i] = Math.abs(random.nextInt(N*5));
-
-            System.out.println("\nRandomized Quicksort length "+ N);
-
-
-            start = System.currentTimeMillis();
-            sortRandom(sequence, 0, N - 1);
-            end = System.currentTimeMillis();
-
-            total = end - start;
-
-            System.out.println("\nRuntime: "+total);
-
-        }
+            System.out.println("Runtime: "+total);
     }
 
     public static void sort(Comparable[] a)
@@ -91,7 +86,7 @@ public class Test3 {
                 sortRandom(a,lo, partition - 1);
                 sortRandom(a,partition + 1, hi);
             }
-            sequence = a;
+            s1 = a;
         }
     }
 
