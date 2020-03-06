@@ -15,8 +15,7 @@ public class Midterm {
         distinctElements(sortedArray);
     }
 
-   //Selection sort for string array. This is ran twice before and after strings are 
-   //sorted to ensure compareTo is evaluated after char array are sorted by element
+   //Selection sort for string array.
    public static void selectionSort(String[] a) {
         for (int i = 0; i < a.length-1; i++) {
             int min = i;
